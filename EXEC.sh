@@ -5,7 +5,6 @@
 docker run -it --rm \
     -v $(pwd):/projectdir \
     -v /media/gio/Unug/Documents/AI/OpenCode:/conduct:ro \
-    --user 1000:1000 \
     ghcr.io/anomalyco/opencode
 
 # Run commands in container
