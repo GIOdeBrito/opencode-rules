@@ -1,0 +1,12 @@
+
+# Run command below
+# - added volume
+# - added user 1000
+docker run -it --rm \
+    -v $(pwd):/projectdir \
+    -v /media/gio/Unug/Documents/AI/OpenCode:/conduct:ro \
+    --user 1000:1000 \
+    ghcr.io/anomalyco/opencode
+
+# Run commands in container
+docker exec $(docker ps | grep -i "opencode" | awk -F '     ' '{print $3}') ls
