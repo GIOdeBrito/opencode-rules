@@ -1,7 +1,7 @@
 
-# Run command below
-# - added volume
-# - added user 1000
+# Run command below on gio@ugarit
+# - added volumes
+# - added output volume
 docker run -it --rm \
     -v $(pwd):/projectdir \
     -v /media/gio/Unug/Documents/AI/OpenCode:/conduct:ro \

@@ -17,6 +17,7 @@ Exceptions to Allman's strict rule:
 - lambdas;
 - JSON and objects;
 - JS files exports;
+- CSS files;
 
 These above can be written/refactored in this style similar to K&R;
 
