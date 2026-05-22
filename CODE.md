@@ -1,34 +1,45 @@
-Follow strictly Allman's identation style.
 
-while(x == y)
+Coding Style Rules:
+* Follow Allman's identation style unless the language has a stringly stablished or enforced syntax/paradigm;
+* Use tabs instead of spaces for indentation;
+
+Example:
+
+method (x, y, z)
 {
     // Code
 }
 
-function fname (args)
+function method (x, y, z)
 {
     // Code
 }
 
-Even for single lines.
-
-Exceptions to Allman's strict rule:
-
-- lambdas;
-- JSON and objects;
-- JS files exports;
-- CSS files;
-
-These above can be written/refactored in this style similar to K&R;
+The following may use K&R style
+- lambdas / arrow functions;
+- JSON objects;
+- JavaScript exports;
+- CSS blocks;
 
 lambdaExp.func(x => {
     
-    // code goes here, skip the first line
+    // code goes here, always skip the first line
 });
 
-Do not omit braces, e.g: if (x) y();
-Do not compact code, e.g: a { b(); }
+General Rule:
+* Always use full braces;
+* Apply DRY (Don't Repeat Yourself) principles;
+* Make use of guard clauses;
+* Avoid using switch;
+* Avoid using else;
 
-Use tabs instead of spaces;
+Example:
 
-Do not use tabs in: yaml, json files;
+// Full braces, never compact code
+expression(x)
+{
+    // code
+}
+
+Do not use tabs in YAML
+Do not use tabs in JSON;
