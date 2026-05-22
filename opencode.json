@@ -1,4 +1,4 @@
 {
   "$schema": "https://opencode.ai/config.json",
-  "instructions": ["https://raw.githubusercontent.com/GIOdeBrito/opencode-rules/refs/heads/main/CODING_RULES.md"]
+  "instructions": ["https://raw.githubusercontent.com/GIOdeBrito/opencode-rules/refs/heads/main/CODING_RULES.md", "https://raw.githubusercontent.com/GIOdeBrito/opencode-rules/refs/heads/main/REASONING.md"]
 }
