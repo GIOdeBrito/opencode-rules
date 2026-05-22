@@ -5,6 +5,7 @@ Coding Style Rules:
 
 Example:
 
+```JavaScript
 method (x, y, z)
 {
     // Code
@@ -14,6 +15,7 @@ function method (x, y, z)
 {
     // Code
 }
+```
 
 The following may use K&R style
 - lambdas / arrow functions;
@@ -21,10 +23,12 @@ The following may use K&R style
 - JavaScript exports;
 - CSS blocks;
 
+```JavaScript
 lambdaExp.func(x => {
     
     // code goes here, always skip the first line
 });
+```
 
 General Rule:
 * Always use full braces;
@@ -35,11 +39,13 @@ General Rule:
 
 Example:
 
+```JavaScript
 // Full braces, never compact code
 expression(x)
 {
     // code
 }
+```
 
 Do not use tabs in YAML
 Do not use tabs in JSON;
