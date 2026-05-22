@@ -1,0 +1,4 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "instructions": ["https://github.com/GIOdeBrito/opencode-conduct/blob/main/CODING_RULES.md"]
+}
