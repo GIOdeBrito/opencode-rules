@@ -26,7 +26,7 @@ The following may use K&R style
 ```JavaScript
 lambdaExp.func(x => {
     
-    // code goes here, always skip the first line
+    // code goes here, always break the first line
 });
 ```
 
@@ -36,6 +36,8 @@ General Rule:
 * Make use of guard clauses;
 * Avoid using switch;
 * Avoid using else;
+* Avoid deep nesting;
+* Avoid long functions;
 
 Example:
 
