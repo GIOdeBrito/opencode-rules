@@ -8,12 +8,12 @@ General Rule:
 * Avoid using else;
 * Avoid deep nesting;
 * Avoid long functions;
-* Avoid single line code;
+* Avoid compact / single line code;
 * Write strictly human-readable code;
 * Adhere strictly to the stablished coding rules;
 
 Coding Style Rules:
-* Follow Allman's identation style unless the language has a stringly stablished or enforced syntax/paradigm;
+* Follow Allman's identation style unless the language has a strongly stablished or enforced syntax/paradigm;
 * Use tabs instead of spaces for indentation;
 
 Example:
@@ -53,7 +53,7 @@ expression(x)
 }
 ```
 
-Single line coding is strictly forbidden.
+Compact / single line code is strictly forbidden.
 
 Example:
 
@@ -61,12 +61,13 @@ Example:
 if (condition) method();
 ```
 
-Instead wrap it around brackets in K&R style.
+Instead wrap it around brackets in K&R style, or Allman's.
 
 Example:
 
 ```Javascript
-if(condition) {
+if(condition)
+{
     method();
 }
 ```
