@@ -6,9 +6,9 @@ General Rule:
 * Avoid technical debt at all costs;
 * Avoid using switch;
 * Avoid using else;
-* Minimal use of nesting;
 * Avoid deep nesting;
 * Avoid long functions;
+* Avoid single line code;
 * Write strictly human-readable code;
 * Adhere strictly to the stablished coding rules;
 
@@ -50,6 +50,24 @@ Example:
 expression(x)
 {
     // code
+}
+```
+
+Single line coding is strictly forbidden.
+
+Example:
+
+```Javascript
+if (condition) method();
+```
+
+Instead wrap it around brackets in K&R style.
+
+Example:
+
+```Javascript
+if(condition) {
+    method();
 }
 ```
 
