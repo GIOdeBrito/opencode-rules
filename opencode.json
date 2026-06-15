@@ -5,7 +5,7 @@
   ],
   "default_agent": "plan",
   "agent": {
-    "build" {
+    "build": {
       "color": "#87d787"
     },
     "plan": {
@@ -24,7 +24,7 @@
           "review": "allow",
           "build": "ask"
         }
-      }
+      },
       "review": {
         "mode": "primary",
         "hidden": true,
