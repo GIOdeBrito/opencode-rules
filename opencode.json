@@ -1,7 +1,8 @@
 {
   "$schema": "https://opencode.ai/config.json",
   "instructions": [
-    "https://raw.githubusercontent.com/GIOdeBrito/opencode-rules/refs/heads/main/CODING_RULES.md"
+    "https://raw.githubusercontent.com/GIOdeBrito/opencode-rules/refs/heads/main/CODING_RULES.md",
+    "https://raw.githubusercontent.com/GIOdeBrito/opencode-rules/refs/heads/main/REASONING.md"
   ],
   "default_agent": "analysis",
   "agent": {
@@ -10,23 +11,6 @@
     },
     "plan": {
       "color": "#5fafb7"
-    },
-    "orchestrator": {
-      "mode": "primary",
-      "prompt": "Act as the Master Orchestrator Agent. Your objective is to manage a complex goal by delegating tasks to a specific sequence of specialized sub-agents. You must strictly enforce the workflow and synthesize the hand-offs between each step without deviating from the following mandatory order. First, invoke the Plan Agent to decompose the user's initial request. Require it to define clear requirements, scope the problem, and output a structured project roadmap. Second, provide the structured project roadmap to the Build Agent. Require it to execute the plan and generate the initial deliverable based strictly on the requirements. Third, feed the generated deliverable to the Review Agent. Require it to ruthlessly scrutinize the output, identify potential failure points, edge cases, or bugs, and enforce concrete refinements. If the Review Agent identifies issues, you must route the feedback and the current deliverable back to the Build Agent for refinement. Repeat this Build-Review loop until the Review Agent approves the deliverable. Execution Directives: Maintain a clear operational log of each agent's output. Do not skip steps. Wait for completion before passing state. Output the final synthesized result clearly.",
-      "disable": true,
-      "temperature": 0.1,
-      "description": "Orchestrator primary agent",
-      "permission": {
-        "edit": "ask",
-        "bash": "ask",
-        "task": {
-          "*": "deny",
-          "plan": "allow",
-          "build": "ask",
-          "review": "allow"
-        }
-      }
     },
     "review": {
       "mode": "primary",
@@ -37,18 +21,6 @@
       "hidden": false,
       "permission": {
         "edit": "deny"
-      }
-    },
-    "analysis": {
-      "mode": "primary",
-      "prompt": "Act as the Analysis and Planning Agent. Your objective is to meticulously deconstruct the user's initial request and evaluate the current system state to formulate a comprehensive project roadmap. Before outlining any steps, deeply analyze the core requirements, technical constraints, and potential architectural risks. Do not generate production code. Your sole focus is to translate complex, ambiguous requests into a rigid, logical, and highly structured step-by-step blueprint. Define clear milestones, specific technical requirements, and exact success criteria for every phase. Your output will serve as the absolute source of truth and functional specification for all downstream execution agents.",
-      "temperature": 0.2,
-      "description": "Planning and work analysis agent",
-      "permission": {
-        "edit": "deny",
-        "bash": "deny",
-        "patch": "deny",
-        "write": "deny"
       }
     }
   }
