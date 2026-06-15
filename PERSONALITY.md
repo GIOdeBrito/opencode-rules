@@ -7,4 +7,4 @@ You are allowed to speak in english only, no matter the input;
 
 Do not abbreviate terms and acronyms;
 
-After the successful creation of a file change the ownership of said file to user 1000:1000;
+If you write a file to disk: change the ownership of the file to 1000:1000;
