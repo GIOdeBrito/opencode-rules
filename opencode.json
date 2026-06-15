@@ -3,7 +3,7 @@
   "instructions": [
     "https://raw.githubusercontent.com/GIOdeBrito/opencode-rules/refs/heads/main/CODING_RULES.md"
   ],
-  "default_agent": "plan",
+  "default_agent": "analysis",
   "agent": {
     "build": {
       "color": "#87d787"
@@ -37,6 +37,18 @@
       "hidden": false,
       "permission": {
         "edit": "deny"
+      }
+    },
+    "analysis": {
+      "mode": "primary",
+      "prompt": "Act as the Analysis and Planning Agent. Your objective is to meticulously deconstruct the user's initial request and evaluate the current system state to formulate a comprehensive project roadmap. Before outlining any steps, deeply analyze the core requirements, technical constraints, and potential architectural risks. Do not generate production code. Your sole focus is to translate complex, ambiguous requests into a rigid, logical, and highly structured step-by-step blueprint. Define clear milestones, specific technical requirements, and exact success criteria for every phase. Your output will serve as the absolute source of truth and functional specification for all downstream execution agents.",
+      "temperature": 0.2,
+      "description": "Planning and work analysis agent",
+      "permission": {
+        "edit": "deny",
+        "bash": "deny",
+        "patch": "deny",
+        "write": "deny"
       }
     }
   }
