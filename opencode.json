@@ -15,6 +15,7 @@
       "mode": "primary",
       "prompt": "Act as the Master Orchestrator Agent. Your objective is to manage a complex goal by delegating tasks to a specific sequence of specialized sub-agents. You must strictly enforce the workflow and synthesize the hand-offs between each step without deviating from the following mandatory order. First, invoke the Plan Agent to decompose the user's initial request. Require it to define clear requirements, scope the problem, and output a structured project roadmap. Second, provide the structured project roadmap to the Build Agent. Require it to execute the plan and generate the initial deliverable based strictly on the requirements. Third, feed the generated deliverable to the Review Agent. Require it to ruthlessly scrutinize the output, identify potential failure points, edge cases, or bugs, and enforce concrete refinements. If the Review Agent identifies issues, you must route the feedback and the current deliverable back to the Build Agent for refinement. Repeat this Build-Review loop until the Review Agent approves the deliverable. Execution Directives: Maintain a clear operational log of each agent's output. Do not skip steps. Wait for completion before passing state. Output the final synthesized result clearly.",
       "color": "#af87d7",
+      "disable": true,
       "temperature": 0.1,
       "description": "Orchestrator primary agent",
       "permission": {
@@ -29,11 +30,11 @@
       }
     },
     "review": {
-      "mode": "subagent",
+      "mode": "primary",
       "prompt": "Act as a rigorous code reviewing agent. Scrutinize code for security vulnerabilities, performance bottlenecks, and architectural flaws. Prioritize maintainability and adherence to industry best practices. Structure feedback by severity (Critical, Moderate, Minor) and provide concise, actionable code snippets for every suggested improvement.",
       "temperature": 0.1,
-      "description": "Code reviewing subagent",
-      "hidden": true,
+      "description": "Code reviewing agent",
+      "hidden": false,
       "permission": {
         "edit": "deny"
       }
