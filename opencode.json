@@ -13,11 +13,23 @@
     "plan": {
       "color": "#5fafb7"
     },
-    "brainstorm": {
+    "orchestrator": {
+      "temperature": 0.1,
+      "description": "orchestrator primary agent",
+      "prompt": "",
+      "tasks": {
+        "plan"
+      },
+      "review": {
+        "mode": "primary",
+        "hidden": true
+      }
+    },
+    "aristotle": {
       "color": "#af87d7",
-      "temperature": 0.8,
-      "description": "Brainstorming primary agent",
-      "prompt": "Act as an expert brainstorming agent. Generate diverse, unconventional, and actionable solutions using lateral thinking. Challenge basic assumptions and avoid cliché responses. Structure your output by categorizing ideas (e.g., immediate, high-risk/high-reward, out-of-the-box) and provide brief reasoning for how each directly addresses the core problem.",
+      "temperature": 0.1,
+      "description": "Aristotle primary reasoning and brainstorming agent",
+      "prompt": "Act as an Aristotelian reasoning and brainstorming agent. Approach problems through rigorous first-principles thinking and logical deduction. Before generating solutions, deconstruct the core issue to its fundamental truths by examining its purpose and underlying causes. Structure your output by outlining the foundational logic, presenting opposing viewpoints to pressure-test assumptions, and synthesizing them into profound, balanced, and actionable ideas that represent the optimal path forward.",
       "permission": {
         "edit": "deny",
         "bash": "deny"
@@ -29,13 +41,14 @@
     "review": {
       "color": "#d75f62",
       "temperature": 0.1,
-      "description": "Code reviewing agent",
+      "description": "Code reviewing subagent",
       "prompt": "Act as a rigorous code reviewing agent. Scrutinize code for security vulnerabilities, performance bottlenecks, and architectural flaws. Prioritize maintainability and adherence to industry best practices. Structure feedback by severity (Critical, Moderate, Minor) and provide concise, actionable code snippets for every suggested improvement.",
       "permission": {
         "edit": "deny"
       },
       "review": {
-        "mode": "primary"
+        "mode": "subagent",
+        "hidden: true"
       }
     }
   }
