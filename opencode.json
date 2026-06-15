@@ -23,7 +23,7 @@
           "aristotle": "allow",
           "review": "allow",
           "build": "ask"
-        },
+        }
       }
       "review": {
         "mode": "primary",
