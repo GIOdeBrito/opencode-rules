@@ -7,7 +7,14 @@
   ],
   "default_agent": "plan",
   "agent": {
+    "build" {
+      "color": "#87d787"
+    },
+    "plan": {
+      "color": "#5fafb7"
+    }.
     "brainstorm": {
+      "color": "#af87d7",
       "temperature": 0.8,
       "description": "Brainstorming primary agent",
       "prompt": "Act as an expert brainstorming agent. Generate diverse, unconventional, and actionable solutions using lateral thinking. Challenge basic assumptions and avoid cliché responses. Structure your output by categorizing ideas (e.g., immediate, high-risk/high-reward, out-of-the-box) and provide brief reasoning for how each directly addresses the core problem.",
@@ -20,6 +27,7 @@
       }
     },
     "review": {
+      "color": "#d75f62",
       "temperature": 0.1,
       "description": "Code reviewing agent",
       "prompt": "Act as a rigorous code reviewing agent. Scrutinize code for security vulnerabilities, performance bottlenecks, and architectural flaws. Prioritize maintainability and adherence to industry best practices. Structure feedback by severity (Critical, Moderate, Minor) and provide concise, actionable code snippets for every suggested improvement.",
