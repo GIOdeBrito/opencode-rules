@@ -5,5 +5,19 @@
     "https://raw.githubusercontent.com/GIOdeBrito/opencode-rules/refs/heads/main/REASONING.md",
     "https://raw.githubusercontent.com/GIOdeBrito/opencode-rules/refs/heads/main/PERSONALITY.md"
   ],
-  "___shell": "bash"
+  {
+  "agent": {
+    "brainstorm": {
+      "temperature": 0.8,
+      "description": "Fast reasoning with limited iterations",
+      "prompt": "You are a brainstorming agent. Bring ideas and problem-solving with creativity and ingenuity.",
+      "permission": {
+        "edit": "deny",
+        "bash": "deny"
+      },
+      "review": {
+        "mode": "primary"
+      }
+    }
+  }
 }
