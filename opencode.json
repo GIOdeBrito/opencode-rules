@@ -4,7 +4,7 @@
     "https://raw.githubusercontent.com/GIOdeBrito/opencode-rules/refs/heads/main/CODING_RULES.md",
     "https://raw.githubusercontent.com/GIOdeBrito/opencode-rules/refs/heads/main/REASONING.md"
   ],
-  "default_agent": "analysis",
+  "default_agent": "plan",
   "agent": {
     "build": {
       "color": "#87d787"
@@ -21,6 +21,17 @@
       "hidden": false,
       "permission": {
         "edit": "deny"
+      }
+    },
+    "research": {
+      "mode": "primary",
+      "prompt": "You are a Research agent. Gather, analyze, and summarize accurate data to inform task execution. Prioritize facts and cite sources.",
+      "temperature": 0.1,
+      "description": "Research task agent",
+      "hidden": false,
+      "permission": {
+        "edit": "deny",
+        "write": "deny"
       }
     }
   }
