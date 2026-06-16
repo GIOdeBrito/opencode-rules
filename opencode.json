@@ -18,20 +18,30 @@
       "prompt": "Act as a rigorous code reviewing agent. Scrutinize code for security vulnerabilities, performance bottlenecks, and architectural flaws. Prioritize maintainability and adherence to industry best practices. Structure feedback by severity (Critical, Moderate, Minor) and provide concise, actionable code snippets for every suggested improvement.",
       "temperature": 0.1,
       "description": "Code reviewing agent",
-      "hidden": false,
       "permission": {
         "edit": "deny"
+      },
+      "tools": {
+        "write": false,
+        "bash": false,
+	"edit": false
       }
     },
     "research": {
       "mode": "primary",
+      "color": "#ffaf62",
       "prompt": "You are a Research agent. Gather, analyze, and summarize accurate data to inform task execution. Prioritize facts and cite sources.",
       "temperature": 0.1,
       "description": "Research task agent",
-      "hidden": false,
       "permission": {
         "edit": "deny",
-        "write": "deny"
+        "write": "deny",
+	"bash": "deny"
+      },
+      "tools": {
+        "write": false,
+        "bash": false,
+	"edit": false
       }
     }
   }
