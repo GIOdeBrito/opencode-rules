@@ -2,7 +2,8 @@
   "$schema": "https://opencode.ai/config.json",
   "instructions": [
     "https://raw.githubusercontent.com/GIOdeBrito/opencode-rules/refs/heads/main/CODING_RULES.md",
-    "https://raw.githubusercontent.com/GIOdeBrito/opencode-rules/refs/heads/main/REASONING.md"
+    "https://raw.githubusercontent.com/GIOdeBrito/opencode-rules/refs/heads/main/REASONING.md",
+    "https://raw.githubusercontent.com/GIOdeBrito/opencode-rules/refs/heads/main/GENERAL.md"
   ],
   "default_agent": "plan",
   "agent": {
@@ -33,6 +34,7 @@
       "prompt": "You are a Research agent. Gather, analyze, and summarize accurate data to inform task execution. Prioritize facts and cite sources.",
       "temperature": 0.1,
       "description": "Research task agent",
+      "disable": true,
       "permission": {
         "edit": "deny",
         "write": "deny",
