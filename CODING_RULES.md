@@ -11,7 +11,16 @@ General Rules:
 * Avoid compact / single line code;
 * Write strictly human-readable code;
 * Write high performance code;
-* Adhere strictly to the stablished coding rules;
+* Adhere strictly to the industry's best practices;
+* Use descriptive, intention-revealing names;
+* Prefer pure functions;
+* Enforce immutability;
+* Fail fast on errors;
+* Sanitize all inputs;
+* Comment the "why", not the "what";
+* Enforce strict type checking;
+* Minimize external dependencies;
+* Write tests for edge cases;
 
 Coding Style Rules:
 * Follow Allman's identation style unless the language has a strongly stablished or enforced syntax/paradigm;
@@ -33,6 +42,7 @@ function method (x, y, z)
 
 The following may use K&R style
 - lambdas / arrow functions;
+- if/else statements;
 - JSON objects;
 - JavaScript exports;
 - CSS blocks;
@@ -56,22 +66,15 @@ expression(x)
 
 Compact / single line code is strictly forbidden.
 
-Example:
-
 ```Javascript
+// Bad code example
 if (condition) method();
 ```
 
-Instead wrap it around brackets in K&R style, or Allman's.
-
-Example:
+Instead wrap it around brackets in K&R style.
 
 ```Javascript
-if(condition)
-{
-    method();
-}
-
+// Good code example
 if(condition) {
     method();
 }
