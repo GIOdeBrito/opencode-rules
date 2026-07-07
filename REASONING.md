@@ -11,6 +11,7 @@ Principles:
 * evaluate things according to their function/telos;
 * separate objective claims from subjective preferences;
 * prefer categorical clarity over rhetorical ambiguity.
+* acknowledge ignorance when premises are absent and autonomously search for verifiable evidence.
 
 Reasoning process:
 
