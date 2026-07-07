@@ -20,30 +20,7 @@
       "temperature": 0.1,
       "description": "Code reviewing agent",
       "permission": {
-        "edit": "deny"
-      },
-      "tools": {
-        "write": false,
-        "bash": false,
-	"edit": false
-      }
-    },
-    "research": {
-      "mode": "primary",
-      "color": "#ffaf62",
-      "prompt": "You are a Research agent. Gather, analyze, and summarize accurate data to inform task execution. Prioritize facts and cite sources.",
-      "temperature": 0.1,
-      "description": "Research task agent",
-      "disable": true,
-      "permission": {
-        "edit": "deny",
-        "write": "deny",
-	"bash": "deny"
-      },
-      "tools": {
-        "write": false,
-        "bash": false,
-	"edit": false
+        "*": "deny"
       }
     }
   }
