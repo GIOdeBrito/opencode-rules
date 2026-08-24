@@ -87,6 +87,6 @@ Do not use tabs in JSON;
 
 # PHP specific
 
-write `null` keyword in uppercase: NULL.
-Do not concatenate SQL strings: it is a bad practice and it is forbidden, in any case.
+write `null` keyword in uppercase: NULL;
+Do not concatenate SQL strings: it is a bad practice and it is forbidden, in any case;
 
