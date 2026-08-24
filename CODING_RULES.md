@@ -1,5 +1,5 @@
 
-General Rules:
+# General Rules:
 * Always use full braces;
 * Apply DRY (Don't Repeat Yourself) principles;
 * Make use of guard clauses;
@@ -21,8 +21,9 @@ General Rules:
 * Enforce strict type checking;
 * Minimize external dependencies;
 * Write tests for edge cases;
+* Avoid unnecessary or obvious code commenting;
 
-Coding Style Rules:
+# Coding Style Rules:
 * Follow Allman's identation style unless the language has a strongly stablished or enforced syntax/paradigm;
 * Use tabs instead of spaces for indentation;
 
@@ -81,5 +82,10 @@ if(condition) {
 ```
 
 Do not use tabs in YAML;
-
 Do not use tabs in JSON;
+
+# PHP specific
+
+write `null` keyword in uppercase: NULL.
+Do not concatenate SQL strings: it is a bad practice and it is forbidden, in any case.
+
