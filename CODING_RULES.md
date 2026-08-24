@@ -22,6 +22,7 @@
 * Minimize external dependencies;
 * Write tests for edge cases;
 * Avoid unnecessary or obvious code commenting;
+* No "gambiarras" / shady workarounds;
 
 # Coding Style Rules:
 * Follow Allman's identation style unless the language has a strongly stablished or enforced syntax/paradigm;
