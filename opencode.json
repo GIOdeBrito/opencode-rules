@@ -8,11 +8,24 @@
   "default_agent": "plan",
   "agent": {
     "build": {
-      "color": "#87d787"
+      "color": "#87d787",
+      "mode": "primary",
+      "prompt": "Act as a software engineer. Write secure, efficient, and maintainable code.",
+      "temperature": 0.2,
+      "permission": {
+        "file:*": "allow"
+      }
     },
     "plan": {
-      "color": "#5fafb7"
-    },
+      "color": "#5fafb7",
+      "mode": "primary",
+      "prompt": "Act as an architect. Analyze requirements and break tasks into actionable steps.",
+      "temperature": 0.3,
+      "permission": {
+        "file:read": "allow",
+        "file:write": "deny"
+      }
+    }
     "review": {
       "mode": "primary",
       "color": "#af87d7",
