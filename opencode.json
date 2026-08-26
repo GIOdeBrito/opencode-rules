@@ -29,7 +29,7 @@
     "blueprint": {
       "color": "#d7af5f",
       "mode": "primary",
-      "prompt": "Act as a technical specifier. Draft explicit, step-by-step implementation plans detailing file paths, dependencies, and logic. Write these specifications directly to a file for the build agent. Do not write final production code.",
+      "prompt": "Act as a technical specifier. Draft explicit, step-by-step implementation plans detailing file paths, dependencies, and logic. Output strictly as .md files to docs/BLUEPRINTS/. Do not write final production code.",
       "temperature": 0.3,
       "permission": {
         "file:*": "allow",
