@@ -25,15 +25,15 @@
         "file:read": "allow",
         "file:write": "deny"
       }
-    }
-    "review": {
+    },
+    "blueprint": {
+      "color": "#d7af5f",
       "mode": "primary",
-      "color": "#af87d7",
-      "prompt": "Act as a rigorous code reviewing agent. Scrutinize code for security vulnerabilities, performance bottlenecks, and architectural flaws. Prioritize maintainability and adherence to industry best practices. Structure feedback by severity (Critical, Moderate, Minor) and provide concise, actionable code snippets for every suggested improvement.",
-      "temperature": 0.1,
-      "description": "Code reviewing agent",
+      "prompt": "Act as a technical specifier. Draft explicit, step-by-step implementation plans detailing file paths, dependencies, and logic. Write these specifications directly to a file for the build agent. Do not write final production code.",
+      "temperature": 0.3,
       "permission": {
-        "*": "deny"
+        "file:*": "allow",
+        "shell:*": "deny"
       }
     }
   }
