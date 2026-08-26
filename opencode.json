@@ -29,11 +29,18 @@
     "blueprint": {
       "color": "#d7af5f",
       "mode": "primary",
+      "description": "Plan file generator",
       "prompt": "Act as a technical specifier. Draft explicit, step-by-step implementation plans detailing file paths, dependencies, and logic. Output strictly as .md files to docs/BLUEPRINTS/. Do not write final production code.",
       "temperature": 0.3,
       "permission": {
-        "file:*": "allow",
-        "shell:*": "deny"
+        "read": {
+          "*": "allow"
+        },
+        "edit": {
+          "docs/BLUEPRINTS/*": "allow",
+          "*": "deny"
+        },
+        "bash": "deny"
       }
     }
   }
