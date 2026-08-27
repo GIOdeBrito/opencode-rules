@@ -37,8 +37,8 @@
           "*": "allow"
         },
         "edit": {
-          "docs/BLUEPRINTS/*": "allow",
-          "*": "deny"
+          "*": "deny",
+          "docs/BLUEPRINTS/*": "allow"
         },
         "bash": "deny"
       }
