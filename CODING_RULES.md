@@ -131,6 +131,56 @@ else if(condition)
 }
 ```
 
+## Spacing formatting
+
+```Javascript
+// Bad code
+// Everything is cramped together in a cacophony
+if(condition)
+{
+    method();
+}
+else if(condition)
+{
+    method();
+}
+if(condition)
+{
+    method();
+}
+if(condition)
+{
+    method();
+}
+method().dosomething();
+```
+
+
+```Javascript
+// Good code
+// Properly separated for legibility based on relationship
+if(condition)
+{
+    method();
+}
+else if(condition)
+{
+    method();
+}
+
+if(condition)
+{
+    method();
+}
+
+if(condition)
+{
+    method();
+}
+
+method().dosomething();
+```
+
 Do not use tabs in YAML;
 Do not use tabs in JSON;
 
