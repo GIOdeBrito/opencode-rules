@@ -10,7 +10,6 @@
 * Write strictly human-readable code;
 * Write high performance code;
 * Use descriptive, intention-revealing names;
-* Prefer pure functions;
 * Enforce immutability;
 * Fail fast on errors;
 * Sanitize all inputs;
@@ -19,6 +18,7 @@
 * Minimize external dependencies;
 * Avoid unnecessary or obvious code commenting;
 * Avoid unnecessary use of else, use early returns if possible;
+* Apply Functional OOP paradigm;
 
 # Coding Style Rules:
 * Follow Allman's identation style unless the language has a strongly stablished or enforced syntax/paradigm;
