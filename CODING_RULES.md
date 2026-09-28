@@ -3,16 +3,12 @@
 * Always use full braces;
 * Apply DRY (Don't Repeat Yourself) principles;
 * Make use of guard clauses;
-* Avoid technical debt;
-* Avoid using switch;
-* Avoid using else;
 * Avoid deep nesting;
-* Avoid long functions;
+* Maximum 20 lines per function;
 * Avoid "gambiarras" / shady workarounds;
 * Avoid compact / single line code;
 * Write strictly human-readable code;
 * Write high performance code;
-* Adhere strictly to the industry's best practices;
 * Use descriptive, intention-revealing names;
 * Prefer pure functions;
 * Enforce immutability;
@@ -21,7 +17,6 @@
 * Comment the "why", not the "what";
 * Enforce strict type checking;
 * Minimize external dependencies;
-* Write tests for edge cases;
 * Avoid unnecessary or obvious code commenting;
 
 # Coding Style Rules:
@@ -87,8 +82,6 @@ Do not use tabs in YAML;
 Do not use tabs in JSON;
 
 # PHP specific
-
 write `null` keyword in uppercase: NULL;
-
-do not concatenate SQL strings: it is a bad practice and it is forbidden, in any case;
+do not concatenate SQL strings: it is a bad practice and it is forbidden, in any case.
 
