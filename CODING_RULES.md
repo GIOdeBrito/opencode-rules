@@ -18,6 +18,7 @@
 * Enforce strict type checking;
 * Minimize external dependencies;
 * Avoid unnecessary or obvious code commenting;
+* Avoid unnecessary use of else, use early returns if possible;
 
 # Coding Style Rules:
 * Follow Allman's identation style unless the language has a strongly stablished or enforced syntax/paradigm;
@@ -39,7 +40,6 @@ function method (x, y, z)
 
 The following may use K&R style
 - lambdas / arrow functions;
-- if/else statements;
 - JSON objects;
 - JavaScript exports;
 - CSS blocks;
@@ -51,8 +51,6 @@ lambdaExp.func(x => {
 });
 ```
 
-Example:
-
 ```JavaScript
 // Full braces, never compact code
 expression(x)
@@ -61,24 +59,55 @@ expression(x)
 }
 ```
 
-Compact / single line code is strictly forbidden.
+## Compact / single line code
 
 ```Javascript
-// Bad code example
+// Bad code
+// Single lined without brackets
 if (condition) method();
 ```
 
-Instead wrap it around brackets in K&R style.
-
 ```Javascript
-// Good code example
+// Good code
+// Wrapped around brackets
+// Not compact
 if(condition) {
     method();
 }
 ```
 
-Do not use tabs in YAML;
+## Bloated code 
 
+```Javascript
+// Bad code
+// Too tiring for my eyes
+// Unnecessary nesting
+// Unnecessary use of else
+// Brackets are in K&R style
+if (typeof dialog.showModal === 'function') {
+    if (!dialog.open) {
+        dialog.showModal();
+    }
+} else {
+    dialog.setAttribute('open', '');
+}
+```
+
+```Javascript
+// Good code
+// Use of early return
+// Brackets are in Allman style
+// No unnecessary nesting
+if (typeof dialog.showModal === 'function' && !dialog.open)
+{
+    dialog.showModal();
+    return;
+}
+
+dialog.setAttribute('open', '');
+```
+
+Do not use tabs in YAML;
 Do not use tabs in JSON;
 
 # PHP specific
