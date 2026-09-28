@@ -98,13 +98,37 @@ if (typeof dialog.showModal === 'function') {
 // Use of early return
 // Brackets are in Allman style
 // No unnecessary nesting
-if (typeof dialog.showModal === 'function' && !dialog.open)
+// If is hugging the parenthesis
+if(typeof dialog.showModal === 'function' && !dialog.open)
 {
     dialog.showModal();
     return;
 }
 
 dialog.setAttribute('open', '');
+```
+
+## If/else/switch, etc. formatting
+
+```Javascript
+// Bad code
+// There is a gap between the if and the parenthesis
+if (condition) {
+    method();
+}
+```
+
+```Javascript
+// Good code
+// They are close to each other
+if(condition)
+{
+    method();
+}
+else if(condition)
+{
+    method();
+}
 ```
 
 Do not use tabs in YAML;
