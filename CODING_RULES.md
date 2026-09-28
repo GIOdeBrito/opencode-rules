@@ -18,7 +18,7 @@
 * Minimize external dependencies;
 * Avoid unnecessary or obvious code commenting;
 * Avoid unnecessary use of else, use early returns if possible;
-* Apply Functional OOP paradigm;
+* Apply Imperative OOP paradigm;
 
 # Coding Style Rules:
 * Follow Allman's identation style unless the language has a strongly stablished or enforced syntax/paradigm;
