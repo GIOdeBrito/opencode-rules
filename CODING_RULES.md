@@ -1,22 +1,20 @@
 
 # General Rules:
-* Always use full braces;
 * Make use of guard clauses;
-* Avoid deep nesting;
-* Avoid "gambiarras" / shady workarounds;
-* Avoid compact / single line code;
-* Write strictly human-readable code;
-* Write high performance code;
+* Enforce the Single Responsibility Principle (SRP);
+* Extract functions based on distinct behaviors and testability, not line counts;
+* Favor flat code over deep nesting;
+* Do not suppress errors, bypass type safety, use shady workarounds, or employ monkey-patching;
+* Prioritize readability over brevity;
 * Use descriptive, intention-revealing names;
-* Enforce immutability;
 * Fail fast on errors;
-* When necessary, sanitize inputs;
-* Comment the "why", not the "what";
+* Sanitize inputs at system bounds;
+* Comment the "why" behind complex logic;
 * Enforce strict type checking;
 * Minimize external dependencies;
 * Avoid unnecessary or obvious code commenting;
-* Avoid unnecessary use of else, use early returns if possible;
-* Apply Imperative OOP paradigm;
+* Minimize the use of else;
+* Use the idiomatic paradigm for the specific language/framework;
 
 # Coding Style Rules:
 * Follow Allman's identation style unless the language has a strongly stablished or enforced syntax/paradigm;
