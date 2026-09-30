@@ -3,7 +3,6 @@
 * Always use full braces;
 * Make use of guard clauses;
 * Avoid deep nesting;
-* Maximum 20 lines per function;
 * Avoid "gambiarras" / shady workarounds;
 * Avoid compact / single line code;
 * Write strictly human-readable code;
