@@ -1,7 +1,6 @@
 
 # General Rules:
 * Always use full braces;
-* Apply DRY (Don't Repeat Yourself) principles;
 * Make use of guard clauses;
 * Avoid deep nesting;
 * Maximum 20 lines per function;
