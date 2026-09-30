@@ -10,7 +10,7 @@
 * Use descriptive, intention-revealing names;
 * Enforce immutability;
 * Fail fast on errors;
-* Sanitize all inputs;
+* When necessary, sanitize inputs;
 * Comment the "why", not the "what";
 * Enforce strict type checking;
 * Minimize external dependencies;
