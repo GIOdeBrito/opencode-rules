@@ -2,9 +2,10 @@
 # General Rules:
 * Make use of guard clauses;
 * Enforce the Single Responsibility Principle (SRP);
-* Extract functions based on distinct behaviors and testability, not line counts;
+* Extract functions/methods based on distinct behaviors and testability, not line counts;
+* Split functions/methods by concern and separate them accordingly (e.g: do not extract helper functions in a Controller class/file)
 * Favor flat code over deep nesting;
-* Do not suppress errors, bypass type safety, use shady workarounds, or employ monkey-patching;
+* Do not: suppress errors, bypass type safety, use shady workarounds, or employ monkey-patching;
 * Prioritize readability over brevity;
 * Use descriptive, intention-revealing names;
 * Fail fast on errors;
@@ -12,7 +13,7 @@
 * Comment the "why" behind complex logic;
 * Enforce strict type checking;
 * Minimize external dependencies;
-* Avoid unnecessary or obvious code commenting;
+* Avoid unnecessary, obvious code comments;
 * Minimize the use of else;
 * Use the idiomatic paradigm for the specific language/framework;
 
