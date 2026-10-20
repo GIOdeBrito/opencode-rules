@@ -3,7 +3,7 @@
 * Make use of guard clauses;
 * Enforce the Single Responsibility Principle (SRP);
 * Extract functions/methods based on distinct behaviors and testability, not line counts;
-* Split functions/methods by concern and separate them accordingly (e.g: do not extract helper functions in a Controller class/file)
+* Split functions/methods by concern and separate them accordingly (e.g: do not extract helper functions inside a Controller class/file, instead extract them to the `helpers` folders/classes/files, following the current project structure);
 * Favor flat code over deep nesting;
 * Do not: suppress errors, bypass type safety, use shady workarounds, or employ monkey-patching;
 * Prioritize readability over brevity;
@@ -181,7 +181,6 @@ method().dosomething();
 Do not use tabs in YAML;
 Do not use tabs in JSON;
 
-# PHP specific
-write `null` keyword in uppercase: NULL;
-do not concatenate SQL strings: it is a bad practice and it is forbidden, in any case.
+PHP Rules:
+write `null` keyword in uppercase: NULL; do not concatenate SQL strings;
 
