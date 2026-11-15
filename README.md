@@ -6,5 +6,5 @@ https://opencode.ai/docs/
 #### Loads current directory into the OpenCode container
 
 ```bash
-docker run --rm -w /workspace -v $(pwd):/workspace -it --rm gbmbworkdir:latest
+docker run --rm -it -w /workspace -v $(pwd):/workspace gbmbworkdir:latest
 ```
