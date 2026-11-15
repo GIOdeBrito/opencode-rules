@@ -16,10 +16,14 @@
 * Avoid unnecessary, obvious code comments;
 * Minimize the use of else;
 * Use the idiomatic paradigm for the specific language/framework;
+* Do not concatenate SQL strings;
 
 # Coding Style Rules:
 * Follow Allman's identation style unless the language has a strongly stablished or enforced syntax/paradigm;
 * Use tabs instead of spaces for indentation;
+* Do NOT group or pre-declare all variables at the top of a file, class, or function;
+* Declare variables immediately before they are first used, inside the narrowest possible block scope (`if`, `for`, `try`, etc.);
+* Prefer `const` / `final` / `val` at the exact point of initialization rather than declaring uninitialized mutable variables early.
 
 Example:
 
@@ -35,8 +39,9 @@ function method (x, y, z)
 }
 ```
 
-The following may use K&R style
-- lambdas / arrow functions;
+The following may use K&R style:
+- Single-line block bodies (e.g., an `if` block containing only one statement);
+- Lambdas / arrow functions;
 - JSON objects;
 - JavaScript exports;
 - CSS blocks;
@@ -66,8 +71,7 @@ if (condition) method();
 
 ```Javascript
 // Good code
-// Wrapped around brackets
-// Not compact
+// Wrapped in brackets; K&R allowed because the body is a single line
 if(condition) {
     method();
 }
@@ -77,10 +81,9 @@ if(condition) {
 
 ```Javascript
 // Bad code
-// Too tiring for my eyes
+// Too tiring for the eyes
 // Unnecessary nesting
 // Unnecessary use of else
-// Brackets are in K&R style
 if (typeof dialog.showModal === 'function') {
     if (!dialog.open) {
         dialog.showModal();
@@ -113,17 +116,19 @@ dialog.setAttribute('open', '');
 if (condition) {
     method();
 }
+
+else if (condition) {
+    method();
+}
 ```
 
 ```Javascript
 // Good code
 // They are close to each other
-if(condition)
-{
+if(condition) {
     method();
 }
-else if(condition)
-{
+else if(condition) {
     method();
 }
 ```
@@ -178,9 +183,52 @@ if(condition)
 method().dosomething();
 ```
 
+## Variable Declaration Rules
+
+```javascript
+// Bad code
+function processOrder(order, taxRate) {
+    let subtotal = 0;
+    let tax = 0;
+    let total = 0;
+    let discount = 0;
+    
+    if (!order.items.length) return 0;
+    
+    subtotal = order.items.reduce((sum, item) => sum + item.price, 0);
+    if (order.coupon) {
+        discount = subtotal * 0.1;
+    }
+    tax = (subtotal - discount) * taxRate;
+    total = subtotal - discount + tax;
+    return total;
+}
+```
+
+```javascript
+// Good code
+function processOrder(order, taxRate)
+{
+    if(!order.items.length)
+    {
+        return 0;
+    }
+
+    const subtotal = order.items.reduce((sum, item) => sum + item.price, 0);
+    const discount = order.coupon ? subtotal * 0.1 : 0;
+    const taxableAmount = subtotal - discount;
+    const tax = taxableAmount * taxRate;
+    
+    return taxableAmount + tax;
+}
+```
+
+## Other
+
 Do not use tabs in YAML;
 Do not use tabs in JSON;
 
-PHP Rules:
-write `null` keyword in uppercase: NULL; do not concatenate SQL strings;
+## Rules: PHP
+
+write `null` keyword in uppercase: NULL;
 
