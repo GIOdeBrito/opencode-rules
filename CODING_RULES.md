@@ -1,24 +1,27 @@
+# Coding Rules
 
-# General Rules:
-* Make use of guard clauses;
-* Enforce the Single Responsibility Principle (SRP);
-* Extract functions/methods based on distinct behaviors and testability, not line counts;
-* Split functions/methods by concern and separate them accordingly (e.g.: do not extract helper functions inside a Controller class/file, instead extract them to the `helpers` folders/classes/files, following the current project structure);
-* Favor flat code over deep nesting;
-* Do not: suppress errors, bypass type safety, use shady workarounds, or employ monkey-patching;
-* Prioritize readability over brevity;
-* Use descriptive, intention-revealing names;
-* Fail fast on errors;
-* Sanitize inputs at system bounds;
-* Comment the "why" behind complex logic;
-* Enforce strict type checking;
-* Minimize external dependencies;
-* Avoid unnecessary, obvious code comments;
-* Minimize the use of else;
-* Use the idiomatic paradigm for the specific language/framework;
-* Do not concatenate SQL strings;
+## Control Flow & Structure
+- Favor flat control flow over deep nesting: use guard clauses, early returns, and eliminate redundant `else` branches.
+- Follow the Single Responsibility Principle (SRP): decompose functions by distinct behavior and testability, not arbitrary line counts.
+- Separate concerns according to project architecture: place reusable utilities in dedicated helper/utility modules rather than inside controllers or domain handlers.
+- Write idiomatic code tailored to the target language and framework.
 
-# Coding Style Rules:
+## Naming & Documentation
+- Use descriptive, intention-revealing names for variables, functions, and types; prioritize clarity over brevity.
+- Comment only the "why" behind non-obvious business logic, trade-offs, or invariants; omit comments that merely restate what the code does.
+
+## Type Safety & Error Handling
+- Enforce strict static typing; never use `any`, type assertions, or casts to bypass the type system.
+- Fail fast on invalid state or unrecoverable errors.
+- Never suppress, swallow, or silently ignore exceptions or error return values.
+- Do not employ monkey-patching, reflection hacks, or runtime workarounds.
+
+## Security & Dependencies
+- Validate and sanitize all external inputs at system boundaries (API handlers, CLI arguments, file parsers).
+- Use parameterized queries or query builders for database operations; never concatenate raw strings into SQL queries.
+- Prefer standard library APIs over adding external dependencies unless strictly necessary.
+
+## Coding Style Rules:
 * Follow Allman's identation style unless the language has a strongly stablished or enforced syntax/paradigm;
 * Use tabs instead of spaces for indentation;
 * Do NOT group or pre-declare all variables at the top of a file, class, or function;
