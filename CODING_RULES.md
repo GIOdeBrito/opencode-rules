@@ -2,9 +2,10 @@
 
 ## Control Flow & Structure
 - Favor flat control flow over deep nesting: use guard clauses, early returns, and eliminate redundant `else` branches.
-- Follow the Single Responsibility Principle (SRP): decompose functions by distinct behavior and testability, not arbitrary line counts.
-- Separate concerns according to project architecture: place reusable utilities in dedicated helper/utility modules rather than inside controllers or domain handlers.
+- Apply the Single Responsibility Principle to modules, classes, and public entry points, not by fragmenting single-caller internal procedures into tiny wrapper functions.
+- Separate concerns according to project architecture: place utilities shared by two or more call sites in dedicated helper/utility modules rather than inside controllers or domain handlers.
 - Write idiomatic code tailored to the target language and framework.
+- Do not extract private helper functions, sub-routines, or utilities that are only called once. Keep single-use logic inline within its parent method, using clear spacing or brief comments to separate logical phases.
 
 ## Naming & Documentation
 - Use descriptive, intention-revealing names for variables, functions, and types; prioritize clarity over brevity.
